@@ -165,7 +165,6 @@ export class StoryComponent implements OnInit, OnChanges {
     if (this.story._id) {
       this.bot.saveStory(this.story).subscribe(s => {
         this.story.selected = selectStoryAfterSave;
-        this.state.resetConfiguration();
         this.dialog.notify(`Story ${this.story.name} modified`, "Update");
       })
     }
